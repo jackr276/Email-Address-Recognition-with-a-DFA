@@ -10,6 +10,7 @@
 
 
 int main(){
-    printf("%s/n%s/n%s/n%s/n", "Project 1 for CS 341", "")
+    printf("%s\n%s\n%s\n%s\n%s\n", "Project 1 for CS 341", "Section Number: 010", "Semester: Spring 2024", "Written by: Jack Robbins, jmr226", "Instructor: Marvin Nakayama, marvin@njit.edu");
 
+    return 0;
 }
