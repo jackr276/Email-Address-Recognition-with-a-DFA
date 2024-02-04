@@ -5,9 +5,11 @@
  * Spring Semester, 2024
 */
 
+#include <iostream>
 #include<stdio.h>
 #include <string.h>
 #include <sstream>
+
 
 using namespace std;
 
@@ -15,6 +17,11 @@ bool dfa_226(string w);
 
 //All DFA states needed -> Note: q1 start state, q10 trap state
 enum dfa_states_226 {q1, q2, q3, q4, q5, q6, q7, q8, q9, q10};
+
+//all characters that make up the language sigma
+string psi = "abcdefghijklmnopqrstuvwxyz";
+string pi = ".";
+string phi = "@";
 
 int main(){
     //Initial message
@@ -30,9 +37,12 @@ int main(){
 
     //Enter the main loop unless numStrings is 0
     for(int i = 1; i <= numStrings && numStrings != 0; i++){
+        //Prompt user and get string entered
         printf("Enter string %d of %d: ", i, numStrings);
         string word;
-        scanf("%s", &word);
+        cin >> word;
+
+        cout << word << endl;
 
         dfa_226(word);
         
@@ -43,5 +53,12 @@ int main(){
 
 
 bool dfa_226(string w){
+    stringstream word(w);
+
+    char ch;
+    while(word.get(ch)){
+        printf("%c\n", ch);
+    }
+
     return false;
 }
