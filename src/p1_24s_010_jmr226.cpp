@@ -18,9 +18,14 @@ int main(){
     printf("Enter the number of strings that you would like to process: ");
     int numStrings;
 
+    //Get and print the number of strings
     scanf("%d", &numStrings);
+    printf("Processing %d%s%s\n", numStrings, " string", numStrings == 1 ? "" : "s");
 
-    printf("%d\n", numStrings);
+    //Enter the main loop unless numStrings is 0
+    for(int i = 0; i < numStrings && numStrings != 0; i++){
+        printf("%d", i);
+    }
     
 
     return 0;
