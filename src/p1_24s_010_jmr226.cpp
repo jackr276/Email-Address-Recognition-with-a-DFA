@@ -16,7 +16,7 @@ using namespace std;
 bool dfa_226(string w);
 
 //All DFA states needed -> Note: q1 start state, q10 trap state
-enum dfa_states_226 {q1, q2, q3, q4, q5, q6, q7, q8, q9, q10};
+enum dfa_state_226 {q1, q2, q3, q4, q5, q6, q7, q8, q9, q10};
 
 //all characters that make up the language sigma
 string psi = "abcdefghijklmnopqrstuvwxyz";
@@ -55,9 +55,72 @@ int main(){
 bool dfa_226(string w){
     stringstream word(w);
 
+    //All strings start out in q1
+    dfa_state_226 currState = q1;
+
     char ch;
-    while(word.get(ch)){
-        printf("%c\n", ch);
+
+    while(word.get(ch)){    
+        switch(currState){
+            //Start state, all strings begin here
+            case q1:
+                //If we find a lowercase roman numeral, move to q2
+                if(psi.find(ch) != string::npos){
+                    currState = q2;
+                //If we read anything besides a roman numeral in q1, string is invalid
+                } else {
+                    currState = q10;
+                }
+
+                break;
+
+            case q2:
+                //if we read in a character, we stay in q2
+                if(psi.find(ch) != string::npos){
+                    currState = q2;
+
+                //If we get here, we found a ".", move back to q1
+                } else if(pi.find(ch) != string::npos){
+                    currState = q1;
+
+                //if we get here, we found "@", move to q3
+                } else if(phi.find(ch) != string::npos){
+                    currState = q3;
+                
+                //we got something weird, go to trap state q10
+                } else {
+                    currState = q10;
+                }
+
+                break;
+
+            //we've just read the "@" symbol, we must see another roman numeral here to be valid
+            case q3:
+                //if we see a roman numeral, go to q4
+                if(psi.find(ch) != string::npos){
+                    currState = q4;
+                //invalid, go to trap state
+                } else {
+                    currState = q10;
+                }
+
+                break;
+
+            //allowed to read either a "." or roman numerals
+            case q4:
+                //If we see a roman numeral, stay in q4
+
+
+            //Trap state, inescapable
+            case q10:
+                break;
+
+            //Added to avoid compile warnings, we should never get here
+            default:
+                return false;
+        }
+
+        cout << "In state " << currState << " after processing character: " << ch << endl;
     }
 
     return false;
