@@ -57,10 +57,14 @@ bool dfa_226(string w){
 
     //All strings start out in q1
     dfa_state_226 currState = q1;
+    cout << "Beginning processing, currently in start state: q1" << endl;
 
     char ch;
+    bool inAccept;
 
-    while(word.get(ch)){    
+    while(word.get(ch)){
+        inAccept = false;
+
         switch(currState){
             //Start state, all strings begin here
             case q1:
@@ -109,6 +113,102 @@ bool dfa_226(string w){
             //allowed to read either a "." or roman numerals
             case q4:
                 //If we see a roman numeral, stay in q4
+                if(psi.find(ch) != string::npos){
+                    currState = q4;
+                //If we see a ".", go to q5
+                } else if(pi.find(ch) != string::npos){
+                    currState = q5;
+                //Invalid, go to trap state
+                } else {
+                    currState = q10;
+                }
+
+                break;
+
+            //If we see a "g", advance forward, otherwise go back to q4
+            case q5:
+                //potentially at a ".gov" or ".gr"
+                if(ch == 'g'){
+                    currState = q6;
+                //Go back to q4 if we see a roman numeral
+                } else if(psi.find(ch) != string::npos){
+                    currState = q4;
+                //If we get here, the string is invalid, go to trap state
+                } else {
+                    currState = q10;
+                }
+                
+                break;
+
+            case q6:
+                //if we see an 'r', go to q7, an accepting state
+                if(ch == 'r'){
+                    inAccept = true;
+                    currState = q7;
+                //if we see an 'o', potential for ".gov", go to q9
+                } else if (ch == 'o'){
+                    currState = q8;
+                //If we see a roman numeral, accepting "sequence" is messed up, go back to q4
+                } else if (psi.find(ch) != string::npos){
+                    currState = q4;
+                //if we see ".", back to q5
+                } else if(pi.find(ch) != string::npos) {
+                    currState = q5;
+                //invalid, to trap state
+                } else {
+                    currState = q10;
+                }
+
+                break;
+
+            //q7 is an accepting state, but if we get here, we've read another character after being in q7, we need to keep processing
+            case q7:
+                //If we see a roman numeral, go back to q4
+                if(psi.find(ch) != string::npos){
+                    currState = q4;
+                //If we read a ".", back to q5
+                } else if(pi.find(ch) != string::npos){
+                    currState = q5;
+                //trap state
+                } else {
+                    currState = q10;
+                }
+
+                break;
+
+            //We get to q8 by reading ".go", potentially an accepting sequence
+            case q8:
+                //If we read a "v", go to q9, an accepting state
+                if(ch == 'v'){
+                    inAccept = true;
+                    currState = q9;
+                //If we don't see a v, back to q4
+                } else if(psi.find(ch) != string::npos){
+                    currState = q4;
+                //If we see a ".", back to q5
+                } else if(pi.find(ch) != string::npos){
+                    currState = q5;
+                //some invalid entry, go to trap state
+                } else {
+                    currState = q10;
+                }
+
+                break;
+
+            //q9 is an accepting state, but if we get here we've read another character after the "v"
+            case q9:
+                //If we see a roman numeral, back to q4
+                if(psi.find(ch) != string::npos){
+                    currState = q4;
+                //If we see a ".", back to q5
+                } else if(pi.find(ch) != string::npos){
+                    currState = q5;
+                //Otherwise, some invalid entry, go to trap state
+                } else {
+                    currState = q10;
+                }
+            
+            break;
 
 
             //Trap state, inescapable
@@ -123,5 +223,5 @@ bool dfa_226(string w){
         cout << "In state " << currState << " after processing character: " << ch << endl;
     }
 
-    return false;
+    return inAccept;
 }
