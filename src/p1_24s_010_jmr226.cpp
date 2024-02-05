@@ -45,7 +45,11 @@ int main(){
 
         cout << word << endl;
 
-        dfa_226(word);
+        if (dfa_226(word)) {
+            cout << word << " is in the language\n" << endl;
+        } else {
+            cout << word << " is not in the language\n" << endl;
+        }
     }
     
     return 0;
@@ -57,7 +61,7 @@ bool dfa_226(string w){
 
     //All strings start out in q1
     dfa_state_226 currState = q1;
-    cout << "Beginning processing, currently in start state: q1" << endl;
+    cout << "\nBeginning processing, currently in start state: q1" << endl;
 
     char ch;
     bool inAccept;
@@ -222,8 +226,6 @@ bool dfa_226(string w){
 
         cout << "In state q" << currState << " after processing character: " << ch << endl;
     }
-
-    cout << inAccept << endl;
 
     return inAccept;
 }
