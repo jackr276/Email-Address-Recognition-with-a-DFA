@@ -13,10 +13,11 @@
 
 using namespace std;
 
-bool dfa_226(string w);
-
 //All DFA states needed -> Note: q1 start state, q10 trap state
-enum dfa_state_226 {q1, q2, q3, q4, q5, q6, q7, q8, q9, q10};
+enum dfa_state_226 {q1 = 1, q2, q3, q4, q5, q6, q7, q8, q9, q10};
+
+//Predeclare
+bool dfa_226(string w);
 
 //all characters that make up the language sigma
 string psi = "abcdefghijklmnopqrstuvwxyz";
@@ -45,7 +46,6 @@ int main(){
         cout << word << endl;
 
         dfa_226(word);
-        
     }
     
     return 0;
@@ -220,8 +220,10 @@ bool dfa_226(string w){
                 return false;
         }
 
-        cout << "In state " << currState << " after processing character: " << ch << endl;
+        cout << "In state q" << currState << " after processing character: " << ch << endl;
     }
+
+    cout << inAccept << endl;
 
     return inAccept;
 }
