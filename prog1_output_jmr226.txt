@@ -1,0 +1,451 @@
+
+Project 1 for CS 341
+Section Number: 010
+Semester: Spring 2024
+Written by: Jack Robbins, jmr226
+Instructor: Marvin Nakayama, marvin@njit.edu
+
+Enter the number of strings that you would like to process: 
+Processing 20 strings
+
+Enter string 1 of 20: njit@njit.gov
+
+In start state q1
+In q2 after reading: n
+In q2 after reading: j
+In q2 after reading: i
+In q2 after reading: t
+In q3 after reading: @
+In q4 after reading: n
+In q4 after reading: j
+In q4 after reading: i
+In q4 after reading: t
+In q5 after reading: .
+In q6 after reading: g
+In q8 after reading: o
+In q9 after reading: v
+
+njit@njit.gov is in the language
+
+Enter string 2 of 20: b@d.gov
+
+In start state q1
+In q2 after reading: b
+In q3 after reading: @
+In q4 after reading: d
+In q5 after reading: .
+In q6 after reading: g
+In q8 after reading: o
+In q9 after reading: v
+
+b@d.gov is in the language
+
+Enter string 3 of 20: tuv@wxyz.gr
+
+In start state q1
+In q2 after reading: t
+In q2 after reading: u
+In q2 after reading: v
+In q3 after reading: @
+In q4 after reading: w
+In q4 after reading: x
+In q4 after reading: y
+In q4 after reading: z
+In q5 after reading: .
+In q6 after reading: g
+In q7 after reading: r
+
+tuv@wxyz.gr is in the language
+
+Enter string 4 of 20: opqr@.gov
+
+In start state q1
+In q2 after reading: o
+In q2 after reading: p
+In q2 after reading: q
+In q2 after reading: r
+In q3 after reading: @
+In q10 after reading: .
+In q10 after reading: g
+In q10 after reading: o
+In q10 after reading: v
+
+opqr@.gov is not in the language
+
+Enter string 5 of 20: web.rstuv.b.gov.cdef@z.gr.go.stanford.gov
+
+In start state q1
+In q2 after reading: w
+In q2 after reading: e
+In q2 after reading: b
+In q1 after reading: .
+In q2 after reading: r
+In q2 after reading: s
+In q2 after reading: t
+In q2 after reading: u
+In q2 after reading: v
+In q1 after reading: .
+In q2 after reading: b
+In q1 after reading: .
+In q2 after reading: g
+In q2 after reading: o
+In q2 after reading: v
+In q1 after reading: .
+In q2 after reading: c
+In q2 after reading: d
+In q2 after reading: e
+In q2 after reading: f
+In q3 after reading: @
+In q4 after reading: z
+In q5 after reading: .
+In q6 after reading: g
+In q7 after reading: r
+In q5 after reading: .
+In q6 after reading: g
+In q8 after reading: o
+In q5 after reading: .
+In q4 after reading: s
+In q4 after reading: t
+In q4 after reading: a
+In q4 after reading: n
+In q4 after reading: f
+In q4 after reading: o
+In q4 after reading: r
+In q4 after reading: d
+In q5 after reading: .
+In q6 after reading: g
+In q8 after reading: o
+In q9 after reading: v
+
+web.rstuv.b.gov.cdef@z.gr.go.stanford.gov is in the language
+
+Enter string 6 of 20: gg@ggg.gov..gov
+
+In start state q1
+In q2 after reading: g
+In q2 after reading: g
+In q3 after reading: @
+In q4 after reading: g
+In q4 after reading: g
+In q4 after reading: g
+In q5 after reading: .
+In q6 after reading: g
+In q8 after reading: o
+In q9 after reading: v
+In q5 after reading: .
+In q10 after reading: .
+In q10 after reading: g
+In q10 after reading: o
+In q10 after reading: v
+
+gg@ggg.gov..gov is not in the language
+
+Enter string 7 of 20: zyxw.@phone.gov
+
+In start state q1
+In q2 after reading: z
+In q2 after reading: y
+In q2 after reading: x
+In q2 after reading: w
+In q1 after reading: .
+In q10 after reading: @
+In q10 after reading: p
+In q10 after reading: h
+In q10 after reading: o
+In q10 after reading: n
+In q10 after reading: e
+In q10 after reading: .
+In q10 after reading: g
+In q10 after reading: o
+In q10 after reading: v
+
+zyxw.@phone.gov is not in the language
+
+Enter string 8 of 20: gov@govern.gov.
+
+In start state q1
+In q2 after reading: g
+In q2 after reading: o
+In q2 after reading: v
+In q3 after reading: @
+In q4 after reading: g
+In q4 after reading: o
+In q4 after reading: v
+In q4 after reading: e
+In q4 after reading: r
+In q4 after reading: n
+In q5 after reading: .
+In q6 after reading: g
+In q8 after reading: o
+In q9 after reading: v
+In q5 after reading: .
+
+gov@govern.gov. is not in the language
+
+Enter string 9 of 20: yellow@abc.gov.green
+
+In start state q1
+In q2 after reading: y
+In q2 after reading: e
+In q2 after reading: l
+In q2 after reading: l
+In q2 after reading: o
+In q2 after reading: w
+In q3 after reading: @
+In q4 after reading: a
+In q4 after reading: b
+In q4 after reading: c
+In q5 after reading: .
+In q6 after reading: g
+In q8 after reading: o
+In q9 after reading: v
+In q5 after reading: .
+In q6 after reading: g
+In q7 after reading: r
+In q4 after reading: e
+In q4 after reading: e
+In q4 after reading: n
+
+yellow@abc.gov.green is not in the language
+
+Enter string 10 of 20: random@gov
+
+In start state q1
+In q2 after reading: r
+In q2 after reading: a
+In q2 after reading: n
+In q2 after reading: d
+In q2 after reading: o
+In q2 after reading: m
+In q3 after reading: @
+In q4 after reading: g
+In q4 after reading: o
+In q4 after reading: v
+
+random@gov is not in the language
+
+Enter string 11 of 20: rewq@g.gov.gr.gor
+
+In start state q1
+In q2 after reading: r
+In q2 after reading: e
+In q2 after reading: w
+In q2 after reading: q
+In q3 after reading: @
+In q4 after reading: g
+In q5 after reading: .
+In q6 after reading: g
+In q8 after reading: o
+In q9 after reading: v
+In q5 after reading: .
+In q6 after reading: g
+In q7 after reading: r
+In q5 after reading: .
+In q6 after reading: g
+In q8 after reading: o
+In q4 after reading: r
+
+rewq@g.gov.gr.gor is not in the language
+
+Enter string 12 of 20: www@gov.govr
+
+In start state q1
+In q2 after reading: w
+In q2 after reading: w
+In q2 after reading: w
+In q3 after reading: @
+In q4 after reading: g
+In q4 after reading: o
+In q4 after reading: v
+In q5 after reading: .
+In q6 after reading: g
+In q8 after reading: o
+In q9 after reading: v
+In q4 after reading: r
+
+www@gov.govr is not in the language
+
+Enter string 13 of 20: wwwc@gov.gr
+
+In start state q1
+In q2 after reading: w
+In q2 after reading: w
+In q2 after reading: w
+In q2 after reading: c
+In q3 after reading: @
+In q4 after reading: g
+In q4 after reading: o
+In q4 after reading: v
+In q5 after reading: .
+In q6 after reading: g
+In q7 after reading: r
+
+wwwc@gov.gr is in the language
+
+Enter string 14 of 20: .five@six.gov
+
+In start state q1
+In q10 after reading: .
+In q10 after reading: f
+In q10 after reading: i
+In q10 after reading: v
+In q10 after reading: e
+In q10 after reading: @
+In q10 after reading: s
+In q10 after reading: i
+In q10 after reading: x
+In q10 after reading: .
+In q10 after reading: g
+In q10 after reading: o
+In q10 after reading: v
+
+.five@six.gov is not in the language
+
+Enter string 15 of 20: governess@go.gov@
+
+In start state q1
+In q2 after reading: g
+In q2 after reading: o
+In q2 after reading: v
+In q2 after reading: e
+In q2 after reading: r
+In q2 after reading: n
+In q2 after reading: e
+In q2 after reading: s
+In q2 after reading: s
+In q3 after reading: @
+In q4 after reading: g
+In q4 after reading: o
+In q5 after reading: .
+In q6 after reading: g
+In q8 after reading: o
+In q9 after reading: v
+In q10 after reading: @
+
+governess@go.gov@ is not in the language
+
+Enter string 16 of 20: govern@government.gr.govt
+
+In start state q1
+In q2 after reading: g
+In q2 after reading: o
+In q2 after reading: v
+In q2 after reading: e
+In q2 after reading: r
+In q2 after reading: n
+In q3 after reading: @
+In q4 after reading: g
+In q4 after reading: o
+In q4 after reading: v
+In q4 after reading: e
+In q4 after reading: r
+In q4 after reading: n
+In q4 after reading: m
+In q4 after reading: e
+In q4 after reading: n
+In q4 after reading: t
+In q5 after reading: .
+In q6 after reading: g
+In q7 after reading: r
+In q5 after reading: .
+In q6 after reading: g
+In q8 after reading: o
+In q9 after reading: v
+In q4 after reading: t
+
+govern@government.gr.govt is not in the language
+
+Enter string 17 of 20: govern@government.gov.gr
+
+In start state q1
+In q2 after reading: g
+In q2 after reading: o
+In q2 after reading: v
+In q2 after reading: e
+In q2 after reading: r
+In q2 after reading: n
+In q3 after reading: @
+In q4 after reading: g
+In q4 after reading: o
+In q4 after reading: v
+In q4 after reading: e
+In q4 after reading: r
+In q4 after reading: n
+In q4 after reading: m
+In q4 after reading: e
+In q4 after reading: n
+In q4 after reading: t
+In q5 after reading: .
+In q6 after reading: g
+In q8 after reading: o
+In q9 after reading: v
+In q5 after reading: .
+In q6 after reading: g
+In q7 after reading: r
+
+govern@government.gov.gr is in the language
+
+Enter string 18 of 20: @mnop.gov
+
+In start state q1
+In q10 after reading: @
+In q10 after reading: m
+In q10 after reading: n
+In q10 after reading: o
+In q10 after reading: p
+In q10 after reading: .
+In q10 after reading: g
+In q10 after reading: o
+In q10 after reading: v
+
+@mnop.gov is not in the language
+
+Enter string 19 of 20: xyzz.bcde.grow@.gov
+
+In start state q1
+In q2 after reading: x
+In q2 after reading: y
+In q2 after reading: z
+In q2 after reading: z
+In q1 after reading: .
+In q2 after reading: b
+In q2 after reading: c
+In q2 after reading: d
+In q2 after reading: e
+In q1 after reading: .
+In q2 after reading: g
+In q2 after reading: r
+In q2 after reading: o
+In q2 after reading: w
+In q3 after reading: @
+In q10 after reading: .
+In q10 after reading: g
+In q10 after reading: o
+In q10 after reading: v
+
+xyzz.bcde.grow@.gov is not in the language
+
+Enter string 20 of 20: abcd..efg@fort.gov
+
+In start state q1
+In q2 after reading: a
+In q2 after reading: b
+In q2 after reading: c
+In q2 after reading: d
+In q1 after reading: .
+In q10 after reading: .
+In q10 after reading: e
+In q10 after reading: f
+In q10 after reading: g
+In q10 after reading: @
+In q10 after reading: f
+In q10 after reading: o
+In q10 after reading: r
+In q10 after reading: t
+In q10 after reading: .
+In q10 after reading: g
+In q10 after reading: o
+In q10 after reading: v
+
+abcd..efg@fort.gov is not in the language
+

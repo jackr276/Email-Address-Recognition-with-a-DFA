@@ -10,7 +10,6 @@
 #include <string.h>
 #include <sstream>
 
-
 using namespace std;
 
 //All DFA states needed -> Note: q1 start state, q10 trap state
@@ -25,6 +24,9 @@ string pi = ".";
 string phi = "@";
 
 
+/**
+ * The main function is used for printing the header and running the main loop of the program, after getting the user's input
+*/
 int main(){
     //Initial message
     printf("\n%s\n%s\n%s\n%s\n%s\n\n", "Project 1 for CS 341", "Section Number: 010", "Semester: Spring 2024", "Written by: Jack Robbins, jmr226", "Instructor: Marvin Nakayama, marvin@njit.edu");
@@ -66,7 +68,7 @@ bool dfa_226(string w){
 
     //All strings start out in q1
     dfa_state_226 currState = q1;
-    cout << "\nIn q1, beginning processing" << endl;
+    cout << "\nIn start state q1" << endl;
 
     char ch;
     bool inAccept;
