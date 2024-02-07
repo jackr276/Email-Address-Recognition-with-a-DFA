@@ -24,6 +24,7 @@ string psi = "abcdefghijklmnopqrstuvwxyz";
 string pi = ".";
 string phi = "@";
 
+
 int main(){
     //Initial message
     printf("\n%s\n%s\n%s\n%s\n%s\n\n", "Project 1 for CS 341", "Section Number: 010", "Semester: Spring 2024", "Written by: Jack Robbins, jmr226", "Instructor: Marvin Nakayama, marvin@njit.edu");
@@ -65,7 +66,7 @@ bool dfa_226(string w){
 
     //All strings start out in q1
     dfa_state_226 currState = q1;
-    cout << "\nIn state q1, beginning processing" << endl;
+    cout << "\nIn q1, beginning processing" << endl;
 
     char ch;
     bool inAccept;
@@ -229,7 +230,7 @@ bool dfa_226(string w){
         }
 
         //Tell the user what state we end up in after each char
-        cout << "In state q" << currState << " after processing character: " << ch << endl;
+        cout << "In q" << currState << " after reading: " << ch << endl;
     }
 
     return inAccept;
