@@ -56,6 +56,10 @@ int main(){
 }
 
 
+/**
+ * The dfa function for language recognition. Return true if a string is in the language. Uses a switch statement to act as a state machine,
+ * following the DFA for the language
+*/
 bool dfa_226(string w){
     stringstream word(w);
 
@@ -224,6 +228,7 @@ bool dfa_226(string w){
                 return false;
         }
 
+        //Tell the user what state we end up in after each char
         cout << "In state q" << currState << " after processing character: " << ch << endl;
     }
 
