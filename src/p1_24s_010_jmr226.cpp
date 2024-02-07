@@ -33,8 +33,8 @@ int main(){
     int numStrings;
 
     //Get and print the number of strings
-    scanf("%d", &numStrings);
-    printf("Processing %d%s%s\n", numStrings, " string", numStrings == 1 ? "" : "s");
+    cin >> numStrings;
+    printf("\nProcessing %d%s%s\n\n", numStrings, " string", numStrings == 1 ? "" : "s");
 
     //Enter the main loop unless numStrings is 0
     for(int i = 1; i <= numStrings && numStrings != 0; i++){
@@ -46,9 +46,9 @@ int main(){
         cout << word << endl;
 
         if (dfa_226(word)) {
-            cout << word << " is in the language\n" << endl;
+            cout << "\n" << word << " is in the language\n" << endl;
         } else {
-            cout << word << " is not in the language\n" << endl;
+            cout << "\n" << word << " is not in the language\n" << endl;
         }
     }
     
@@ -65,7 +65,7 @@ bool dfa_226(string w){
 
     //All strings start out in q1
     dfa_state_226 currState = q1;
-    cout << "\nBeginning processing, currently in start state: q1" << endl;
+    cout << "\nIn state q1, beginning processing" << endl;
 
     char ch;
     bool inAccept;
