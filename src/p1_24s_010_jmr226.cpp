@@ -73,6 +73,7 @@ bool dfa_226(string w){
     char ch;
     bool inAccept;
 
+    //Iterate through every character in the string
     while(word.get(ch)){
         inAccept = false;
 
@@ -220,7 +221,6 @@ bool dfa_226(string w){
                 }
             
             break;
-
 
             //Trap state, inescapable
             case q10:
