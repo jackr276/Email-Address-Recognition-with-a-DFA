@@ -8,7 +8,8 @@ Instructor: Marvin Nakayama, marvin@njit.edu
 Enter the number of strings that you would like to process: 
 Processing 20 strings
 
-Enter string 1 of 20: njit@njit.gov
+Enter string 1 of 20: 
+Processing string: njit@njit.gov
 
 In start state q1
 In q2 after reading: n
@@ -27,7 +28,8 @@ In q9 after reading: v
 
 njit@njit.gov is in the language
 
-Enter string 2 of 20: b@d.gov
+Enter string 2 of 20: 
+Processing string: b@d.gov
 
 In start state q1
 In q2 after reading: b
@@ -40,7 +42,8 @@ In q9 after reading: v
 
 b@d.gov is in the language
 
-Enter string 3 of 20: tuv@wxyz.gr
+Enter string 3 of 20: 
+Processing string: tuv@wxyz.gr
 
 In start state q1
 In q2 after reading: t
@@ -57,7 +60,8 @@ In q7 after reading: r
 
 tuv@wxyz.gr is in the language
 
-Enter string 4 of 20: opqr@.gov
+Enter string 4 of 20: 
+Processing string: opqr@.gov
 
 In start state q1
 In q2 after reading: o
@@ -72,7 +76,8 @@ In q10 after reading: v
 
 opqr@.gov is not in the language
 
-Enter string 5 of 20: web.rstuv.b.gov.cdef@z.gr.go.stanford.gov
+Enter string 5 of 20: 
+Processing string: web.rstuv.b.gov.cdef@z.gr.go.stanford.gov
 
 In start state q1
 In q2 after reading: w
@@ -119,7 +124,8 @@ In q9 after reading: v
 
 web.rstuv.b.gov.cdef@z.gr.go.stanford.gov is in the language
 
-Enter string 6 of 20: gg@ggg.gov..gov
+Enter string 6 of 20: 
+Processing string: gg@ggg.gov..gov
 
 In start state q1
 In q2 after reading: g
@@ -140,7 +146,8 @@ In q10 after reading: v
 
 gg@ggg.gov..gov is not in the language
 
-Enter string 7 of 20: zyxw.@phone.gov
+Enter string 7 of 20: 
+Processing string: zyxw.@phone.gov
 
 In start state q1
 In q2 after reading: z
@@ -161,7 +168,8 @@ In q10 after reading: v
 
 zyxw.@phone.gov is not in the language
 
-Enter string 8 of 20: gov@govern.gov.
+Enter string 8 of 20: 
+Processing string: gov@govern.gov.
 
 In start state q1
 In q2 after reading: g
@@ -182,7 +190,8 @@ In q5 after reading: .
 
 gov@govern.gov. is not in the language
 
-Enter string 9 of 20: yellow@abc.gov.green
+Enter string 9 of 20: 
+Processing string: yellow@abc.gov.green
 
 In start state q1
 In q2 after reading: y
@@ -208,7 +217,8 @@ In q4 after reading: n
 
 yellow@abc.gov.green is not in the language
 
-Enter string 10 of 20: random@gov
+Enter string 10 of 20: 
+Processing string: random@gov
 
 In start state q1
 In q2 after reading: r
@@ -224,7 +234,8 @@ In q4 after reading: v
 
 random@gov is not in the language
 
-Enter string 11 of 20: rewq@g.gov.gr.gor
+Enter string 11 of 20: 
+Processing string: rewq@g.gov.gr.gor
 
 In start state q1
 In q2 after reading: r
@@ -247,7 +258,8 @@ In q4 after reading: r
 
 rewq@g.gov.gr.gor is not in the language
 
-Enter string 12 of 20: www@gov.govr
+Enter string 12 of 20: 
+Processing string: www@gov.govr
 
 In start state q1
 In q2 after reading: w
@@ -265,7 +277,8 @@ In q4 after reading: r
 
 www@gov.govr is not in the language
 
-Enter string 13 of 20: wwwc@gov.gr
+Enter string 13 of 20: 
+Processing string: wwwc@gov.gr
 
 In start state q1
 In q2 after reading: w
@@ -282,7 +295,8 @@ In q7 after reading: r
 
 wwwc@gov.gr is in the language
 
-Enter string 14 of 20: .five@six.gov
+Enter string 14 of 20: 
+Processing string: .five@six.gov
 
 In start state q1
 In q10 after reading: .
@@ -301,7 +315,8 @@ In q10 after reading: v
 
 .five@six.gov is not in the language
 
-Enter string 15 of 20: governess@go.gov@
+Enter string 15 of 20: 
+Processing string: governess@go.gov@
 
 In start state q1
 In q2 after reading: g
@@ -324,7 +339,8 @@ In q10 after reading: @
 
 governess@go.gov@ is not in the language
 
-Enter string 16 of 20: govern@government.gr.govt
+Enter string 16 of 20: 
+Processing string: govern@government.gr.govt
 
 In start state q1
 In q2 after reading: g
@@ -355,7 +371,8 @@ In q4 after reading: t
 
 govern@government.gr.govt is not in the language
 
-Enter string 17 of 20: govern@government.gov.gr
+Enter string 17 of 20: 
+Processing string: govern@government.gov.gr
 
 In start state q1
 In q2 after reading: g
@@ -385,7 +402,8 @@ In q7 after reading: r
 
 govern@government.gov.gr is in the language
 
-Enter string 18 of 20: @mnop.gov
+Enter string 18 of 20: 
+Processing string: @mnop.gov
 
 In start state q1
 In q10 after reading: @
@@ -400,7 +418,8 @@ In q10 after reading: v
 
 @mnop.gov is not in the language
 
-Enter string 19 of 20: xyzz.bcde.grow@.gov
+Enter string 19 of 20: 
+Processing string: xyzz.bcde.grow@.gov
 
 In start state q1
 In q2 after reading: x
@@ -425,7 +444,8 @@ In q10 after reading: v
 
 xyzz.bcde.grow@.gov is not in the language
 
-Enter string 20 of 20: abcd..efg@fort.gov
+Enter string 20 of 20: 
+Processing string: abcd..efg@fort.gov
 
 In start state q1
 In q2 after reading: a

@@ -40,13 +40,13 @@ int main(){
     printf("\nProcessing %d%s%s\n\n", numStrings, " string", numStrings == 1 ? "" : "s");
 
     //Enter the main loop unless numStrings is 0
-    for(int i = 1; i <= numStrings && numStrings != 0; i++){
+    for(int i = 1; i <= numStrings && !(numStrings <= 0); i++){
         //Prompt user and get string entered
         printf("Enter string %d of %d: ", i, numStrings);
         string word;
         cin >> word;
 
-        cout << word << endl;
+        cout << "\nProcessing string: " << word << endl;
 
         if (dfa_226(word)) {
             cout << "\n" << word << " is in the language\n" << endl;
