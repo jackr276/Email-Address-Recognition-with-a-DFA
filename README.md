@@ -1,4 +1,4 @@
 # Email Address Recognition with a Discrete Finite Automaton(DFA)
 Author: [Jack Robbins](https://www.github.com/jackr276)
- 
-![Project 1 DFA](https://github.com/jackr276/Email-Address-Recognition-with-a-Discrete-Finite-Automaton/assets/113046361/2bd378f2-55f9-4d5f-88fb-727ac1d5a964)
+
+![P1_DFA_jmr226(1)](https://github.com/jackr276/Email-Address-Recognition-with-a-Discrete-Finite-Automaton/assets/113046361/ffc8d175-1cb0-408f-9b86-b69a530b3de4)
