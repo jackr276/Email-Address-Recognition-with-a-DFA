@@ -49,9 +49,9 @@ int main(){
         cout << "\nProcessing string: " << word << endl;
 
         if (dfa_226(word)) {
-            cout << "\n" << word << " is in the language\n" << endl;
+            cout << "\n" << word << " is accepted\n" << endl;
         } else {
-            cout << "\n" << word << " is not in the language\n" << endl;
+            cout << "\n" << word << " is rejected\n" << endl;
         }
     }
     
@@ -80,10 +80,10 @@ bool dfa_226(string w){
         switch(currState){
             //Start state, all strings begin here
             case q1:
-                //If we find a lowercase roman numeral, move to q2
+                //If we find a lowercase roman letter, move to q2
                 if(psi.find(ch) != string::npos){
                     currState = q2;
-                //If we read anything besides a roman numeral in q1, string is invalid
+                //If we read anything besides a roman letter in q1, string is invalid
                 } else {
                     currState = q10;
                 }
@@ -110,9 +110,9 @@ bool dfa_226(string w){
 
                 break;
 
-            //we've just read the "@" symbol, we must see another roman numeral here to be valid
+            //we've just read the "@" symbol, we must see another roman letter here to be valid
             case q3:
-                //if we see a roman numeral, go to q4
+                //if we see a roman letter, go to q4
                 if(psi.find(ch) != string::npos){
                     currState = q4;
                 //invalid, go to trap state
@@ -122,9 +122,9 @@ bool dfa_226(string w){
 
                 break;
 
-            //allowed to read either a "." or roman numerals
+            //allowed to read either a "." or roman letters
             case q4:
-                //If we see a roman numeral, stay in q4
+                //If we see a roman letter, stay in q4
                 if(psi.find(ch) != string::npos){
                     currState = q4;
                 //If we see a ".", go to q5
@@ -142,7 +142,7 @@ bool dfa_226(string w){
                 //potentially at a ".gov" or ".gr"
                 if(ch == 'g'){
                     currState = q6;
-                //Go back to q4 if we see a roman numeral
+                //Go back to q4 if we see a roman letter that is not a g
                 } else if(psi.find(ch) != string::npos){
                     currState = q4;
                 //If we get here, the string is invalid, go to trap state
@@ -160,7 +160,7 @@ bool dfa_226(string w){
                 //if we see an 'o', potential for ".gov", go to q9
                 } else if (ch == 'o'){
                     currState = q8;
-                //If we see a roman numeral, accepting "sequence" is messed up, go back to q4
+                //If we see a roman letter, accepting "sequence" is messed up, go back to q4
                 } else if (psi.find(ch) != string::npos){
                     currState = q4;
                 //if we see ".", back to q5
@@ -175,7 +175,7 @@ bool dfa_226(string w){
 
             //q7 is an accepting state, but if we get here, we've read another character after being in q7, we need to keep processing
             case q7:
-                //If we see a roman numeral, go back to q4
+                //If we see a roman letter, go back to q4
                 if(psi.find(ch) != string::npos){
                     currState = q4;
                 //If we read a ".", back to q5
@@ -209,7 +209,7 @@ bool dfa_226(string w){
 
             //q9 is an accepting state, but if we get here we've read another character after the "v"
             case q9:
-                //If we see a roman numeral, back to q4
+                //If we see a roman letter, back to q4
                 if(psi.find(ch) != string::npos){
                     currState = q4;
                 //If we see a ".", back to q5

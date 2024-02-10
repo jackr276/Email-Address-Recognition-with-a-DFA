@@ -26,7 +26,7 @@ In q6 after reading: g
 In q8 after reading: o
 In q9 after reading: v
 
-njit@njit.gov is in the language
+njit@njit.gov is accepted
 
 Enter string 2 of 20: 
 Processing string: b@d.gov
@@ -40,7 +40,7 @@ In q6 after reading: g
 In q8 after reading: o
 In q9 after reading: v
 
-b@d.gov is in the language
+b@d.gov is accepted
 
 Enter string 3 of 20: 
 Processing string: tuv@wxyz.gr
@@ -58,7 +58,7 @@ In q5 after reading: .
 In q6 after reading: g
 In q7 after reading: r
 
-tuv@wxyz.gr is in the language
+tuv@wxyz.gr is accepted
 
 Enter string 4 of 20: 
 Processing string: opqr@.gov
@@ -74,7 +74,7 @@ In q10 after reading: g
 In q10 after reading: o
 In q10 after reading: v
 
-opqr@.gov is not in the language
+opqr@.gov is rejected
 
 Enter string 5 of 20: 
 Processing string: web.rstuv.b.gov.cdef@z.gr.go.stanford.gov
@@ -122,7 +122,7 @@ In q6 after reading: g
 In q8 after reading: o
 In q9 after reading: v
 
-web.rstuv.b.gov.cdef@z.gr.go.stanford.gov is in the language
+web.rstuv.b.gov.cdef@z.gr.go.stanford.gov is accepted
 
 Enter string 6 of 20: 
 Processing string: gg@ggg.gov..gov
@@ -144,7 +144,7 @@ In q10 after reading: g
 In q10 after reading: o
 In q10 after reading: v
 
-gg@ggg.gov..gov is not in the language
+gg@ggg.gov..gov is rejected
 
 Enter string 7 of 20: 
 Processing string: zyxw.@phone.gov
@@ -166,7 +166,7 @@ In q10 after reading: g
 In q10 after reading: o
 In q10 after reading: v
 
-zyxw.@phone.gov is not in the language
+zyxw.@phone.gov is rejected
 
 Enter string 8 of 20: 
 Processing string: gov@govern.gov.
@@ -188,7 +188,7 @@ In q8 after reading: o
 In q9 after reading: v
 In q5 after reading: .
 
-gov@govern.gov. is not in the language
+gov@govern.gov. is rejected
 
 Enter string 9 of 20: 
 Processing string: yellow@abc.gov.green
@@ -215,7 +215,7 @@ In q4 after reading: e
 In q4 after reading: e
 In q4 after reading: n
 
-yellow@abc.gov.green is not in the language
+yellow@abc.gov.green is rejected
 
 Enter string 10 of 20: 
 Processing string: random@gov
@@ -232,7 +232,7 @@ In q4 after reading: g
 In q4 after reading: o
 In q4 after reading: v
 
-random@gov is not in the language
+random@gov is rejected
 
 Enter string 11 of 20: 
 Processing string: rewq@g.gov.gr.gor
@@ -256,7 +256,7 @@ In q6 after reading: g
 In q8 after reading: o
 In q4 after reading: r
 
-rewq@g.gov.gr.gor is not in the language
+rewq@g.gov.gr.gor is rejected
 
 Enter string 12 of 20: 
 Processing string: www@gov.govr
@@ -275,7 +275,7 @@ In q8 after reading: o
 In q9 after reading: v
 In q4 after reading: r
 
-www@gov.govr is not in the language
+www@gov.govr is rejected
 
 Enter string 13 of 20: 
 Processing string: wwwc@gov.gr
@@ -293,7 +293,7 @@ In q5 after reading: .
 In q6 after reading: g
 In q7 after reading: r
 
-wwwc@gov.gr is in the language
+wwwc@gov.gr is accepted
 
 Enter string 14 of 20: 
 Processing string: .five@six.gov
@@ -313,7 +313,7 @@ In q10 after reading: g
 In q10 after reading: o
 In q10 after reading: v
 
-.five@six.gov is not in the language
+.five@six.gov is rejected
 
 Enter string 15 of 20: 
 Processing string: governess@go.gov@
@@ -337,7 +337,7 @@ In q8 after reading: o
 In q9 after reading: v
 In q10 after reading: @
 
-governess@go.gov@ is not in the language
+governess@go.gov@ is rejected
 
 Enter string 16 of 20: 
 Processing string: govern@government.gr.govt
@@ -369,7 +369,7 @@ In q8 after reading: o
 In q9 after reading: v
 In q4 after reading: t
 
-govern@government.gr.govt is not in the language
+govern@government.gr.govt is rejected
 
 Enter string 17 of 20: 
 Processing string: govern@government.gov.gr
@@ -400,7 +400,7 @@ In q5 after reading: .
 In q6 after reading: g
 In q7 after reading: r
 
-govern@government.gov.gr is in the language
+govern@government.gov.gr is accepted
 
 Enter string 18 of 20: 
 Processing string: @mnop.gov
@@ -416,7 +416,7 @@ In q10 after reading: g
 In q10 after reading: o
 In q10 after reading: v
 
-@mnop.gov is not in the language
+@mnop.gov is rejected
 
 Enter string 19 of 20: 
 Processing string: xyzz.bcde.grow@.gov
@@ -442,7 +442,7 @@ In q10 after reading: g
 In q10 after reading: o
 In q10 after reading: v
 
-xyzz.bcde.grow@.gov is not in the language
+xyzz.bcde.grow@.gov is rejected
 
 Enter string 20 of 20: 
 Processing string: abcd..efg@fort.gov
@@ -467,5 +467,5 @@ In q10 after reading: g
 In q10 after reading: o
 In q10 after reading: v
 
-abcd..efg@fort.gov is not in the language
+abcd..efg@fort.gov is rejected
 
