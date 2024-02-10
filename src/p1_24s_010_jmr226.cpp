@@ -29,7 +29,7 @@ string phi = "@";
 */
 int main(){
     //Initial message
-    printf("\n%s\n%s\n%s\n%s\n%s\n\n", "Project 1 for CS 341", "Section Number: 010", "Semester: Spring 2024", "Written by: Jack Robbins, jmr226", "Instructor: Marvin Nakayama, marvin@njit.edu");
+    printf("%s\n%s\n%s\n%s\n%s\n\n", "Project 1 for CS 341", "Section Number: 010", "Semester: Spring 2024", "Written by: Jack Robbins, jmr226", "Instructor: Marvin Nakayama, marvin@njit.edu");
 
     //Prompt user for number of strings to enter
     printf("Enter the number of strings that you would like to process: ");
