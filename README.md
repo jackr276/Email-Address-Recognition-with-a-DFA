@@ -13,6 +13,10 @@ The Language $L$ is defined over the alphabet $\Sigma$, which itself is defined 
 In short, the alphabet for this language is all lowercase roman numerals, the "." and the "@" symbol.
 
 From here, we define the language $L$ to be the set of strings over the alphabet $\Sigma$ that are of the form: $L = S_{1}S_{2}^\star\Phi S_{1}S_{2}^\star(S_{3} \cup S_{4})$, where:
+* $S_{1} = \Psi\Psi^\star$, which defines strings of lowercase roman numerals of length at least 1
+* $S_{2} = \Pi\Psi\Psi^\star$, which defines strings like $S_{1}$, except that they begin with a dot
+* $S_{3} =$ {.gov}, one possible valid ending of email addresses in $L$
+* $S_{4} =$ {.gr}, the other possible valid ending of email addresses in $L$
 
 
 
