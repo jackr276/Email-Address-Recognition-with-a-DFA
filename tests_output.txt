@@ -1,8 +1,3 @@
-Project 1 for CS 341
-Section Number: 010
-Semester: Spring 2024
-Written by: Jack Robbins, jmr226
-Instructor: Marvin Nakayama, marvin@njit.edu
 
 Enter the number of strings that you would like to process: 
 Processing 20 strings
