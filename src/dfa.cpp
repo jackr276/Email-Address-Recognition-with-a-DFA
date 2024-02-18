@@ -1,8 +1,5 @@
 /**
  * Jack Robbins
- * UCID: jmr226
- * CS-341 Section 010
- * Spring Semester, 2024
 */
 
 #include <iostream>
@@ -13,10 +10,10 @@
 using namespace std;
 
 //All DFA states needed -> Note: q1 start state, q10 trap state
-enum dfa_state_226 {q1 = 1, q2, q3, q4, q5, q6, q7, q8, q9, q10};
+enum dfa_state{q1 = 1, q2, q3, q4, q5, q6, q7, q8, q9, q10};
 
 //Predeclare
-bool dfa_226(string w);
+bool dfa(string w);
 
 //all characters that make up the language sigma
 string psi = "abcdefghijklmnopqrstuvwxyz";
@@ -48,7 +45,7 @@ int main(){
 
         cout << "\nProcessing string: " << word << endl;
 
-        if (dfa_226(word)) {
+        if (dfa(word)) {
             cout << "\n" << word << " is accepted\n" << endl;
         } else {
             cout << "\n" << word << " is rejected\n" << endl;
@@ -63,11 +60,11 @@ int main(){
  * The dfa function for language recognition. Return true if a string is in the language. Uses a switch statement to act as a state machine,
  * following the DFA for the language
 */
-bool dfa_226(string w){
+bool dfa(string w){
     stringstream word(w);
 
     //All strings start out in q1
-    dfa_state_226 currState = q1;
+    dfa_state currState = q1;
     cout << "\nIn start state q1" << endl;
 
     char ch;
