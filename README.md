@@ -25,6 +25,25 @@ To make this more grounded, two examples of strings that are defined over the La
 ### $L$ is a Regular Language
 By definition, a langauge is regular if there exist a Deterministic Finite Automaton that **accepts** every string in the language and at the same time **rejects** every string not in the language. As we will soon see, there is a DFA $M$ that recognizes every string in $L$ and rejects every string not in $L$. The existence of $M$ shows us in practice that $L$ is a regular language, by definition.
 
+## Deterministic Finite Automaton(DFA) $M$, for $L$
+### 5-Tuple Definition for $M$
+Formally, the DFA that recognized the language $L$ can be defined as the 5-Tuple $M = (Q, \Sigma, \delta, q_{1}, F)$ with:
+* $Q =$ { $q_{1}, q_{2}, q_{3}, q_{4}, q_{5}, q_{6}, q_{7}, q_{8}, q_{9}, q_{10}$ } is the set of all states in $M$
+* $\Sigma = \Psi \cup \Pi \cup \Phi$ is the alphabet that $L$ is defined over, as described above
+* $\delta: Q \times \Sigma \rightarrow Q$ is the transition function, which is defined as:
+
+  | Q | $\Psi_{-g, r, o, v}$ | g | r | o | v | $\Pi$ | $\Phi$ |
+  |---|---|:---------:|---|---|---|---|---|
+  |$q_{1}$| $q_{2}$ | $q_{2}$ | $q_{2}$ | $q_{2}$ | $q_{2}$ | $q_{10}$ | $q_{10}$ |
+  |$q_{2}$| $q_{2}$ | $q_{2}$ | $q_{2}$ | $q_{2}$ | $q_{2}$ | $q_{1}$ | $q_{3}$ |
+  |$q_{3}$| $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{10}$ | $q_{10}$ | 
+  |$q_{4}$| $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{5}$ | $q_{10}$ | 
+  |$q_{5}$| $q_{4}$ | $q_{6}$ | $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{10}$ | $q_{10}$ | 
+  |$q_{6}$| $q_{4}$ | $q_{4}$ | $q_{7}$ | $q_{8}$ | $q_{4}$ | $q_{5}$ | $q_{10}$ | 
+  |$q_{7}$| $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{5}$ | $q_{10}$ | 
+  |$q_{8}$| $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{9}$ | $q_{5}$ | $q_{10}$ | 
+  |$q_{9}$| $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{5}$ | $q_{10}$ | 
+  |$q_{10}$| $q_{10}$ | $q_{10}$ | $q_{10}$ | $q_{10}$ | $q_{10}$ | $q_{10}$ | $q_{10}$ | 
 
 
 
