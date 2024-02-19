@@ -56,7 +56,7 @@ Though useful for rigorously defining the DFA $M$, the 5-Tuple definition is ver
 
 ![P1_DFA_jmr226(1)](https://github.com/jackr276/Email-Address-Recognition-with-a-Discrete-Finite-Automaton/assets/113046361/ffc8d175-1cb0-408f-9b86-b69a530b3de4)
 
-Here is an example of how the string would process a string like "a.bc@ex.gov"
+Here is an example of how the DFA would process the string "a.bc@ex.gov"
 1. Begin in start state $q_{1}$
 2. Read symbol a $\in \Psi$, move to $q_{2}$
 3. Read symbol "." $\in \Pi$, move to $q_{1}$
