@@ -27,7 +27,7 @@ By definition, a langauge is regular if there exist a Deterministic Finite Autom
 
 ## Deterministic Finite Automaton(DFA) $M$, for $L$
 ### 5-Tuple Definition for $M$
-Formally, the DFA that recognized the language $L$ can be defined as the 5-Tuple $M = (Q, \Sigma, \delta, q_{1}, F)$ with:
+Formally, the DFA that recognizes the language $L$ can be defined as the 5-Tuple $M = (Q, \Sigma, \delta, q_{1}, F)$ with:
 * $Q =$ { $q_{1}, q_{2}, q_{3}, q_{4}, q_{5}, q_{6}, q_{7}, q_{8}, q_{9}, q_{10}$ } is the set of all states in $M$
 * $\Sigma = \Psi \cup \Pi \cup \Phi$ is the alphabet that $L$ is defined over, as described above
 * $\delta: Q \times \Sigma \rightarrow Q$ is the transition function, which is defined as:
@@ -43,10 +43,32 @@ Formally, the DFA that recognized the language $L$ can be defined as the 5-Tuple
   |$q_{7}$| $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{5}$ | $q_{10}$ | 
   |$q_{8}$| $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{9}$ | $q_{5}$ | $q_{10}$ | 
   |$q_{9}$| $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{4}$ | $q_{5}$ | $q_{10}$ | 
-  |$q_{10}$| $q_{10}$ | $q_{10}$ | $q_{10}$ | $q_{10}$ | $q_{10}$ | $q_{10}$ | $q_{10}$ | 
+  |$q_{10}$| $q_{10}$ | $q_{10}$ | $q_{10}$ | $q_{10}$ | $q_{10}$ | $q_{10}$ | $q_{10}$ |
 
+* $q_{1}$ is the starting state
+* $F =$ { $q_{7}$, $q_{9}$ } is the set of accepting states
 
+> [!NOTE]
+> Once the DFA goes into state $q_{10}$, there is no way to leave it. This is because $q_{10}$ is a so-called "trap state", meaning that once the DFA enters it, it is trapped in it until it is done reading the string. Strings enter $q_{10}$ after there is a fatal grammar error. For example, reading a "." as the first character will send the DFA to $q_{10}$ for the rest of the string. However, being in $q_{10}$ does not cause the DFA to terminate immediately. This is because, by definition, the DFA must process the entire string, and **then** accept or reject it.
 
-
+### Drawing of $M$
+Though useful for rigorously defining the DFA $M$, the 5-Tuple definition is very abstract and not easy to understand at a glance. Below is an illustration of $M$, to better show how it works. $M$ can be represented as a directed graph, with the nodes being the states from $Q$ and the edges being labeled with what symbol must be read to advance to the next state. States that have a double circle border are accepting states.
 
 ![P1_DFA_jmr226(1)](https://github.com/jackr276/Email-Address-Recognition-with-a-Discrete-Finite-Automaton/assets/113046361/ffc8d175-1cb0-408f-9b86-b69a530b3de4)
+
+Here is an example of how the string would process a string like "a.bc@ex.gov"
+1. Begin in start state $q_{1}$
+2. Read symbol a $\in \Psi$, move to $q_{2}$
+3. Read symbol "." $\in \Pi$, move to $q_{1}$
+4. Read symbol b $\in \Psi$, move to $q_{2}$
+5. Read symbol c $\in \Psi$, move to $q_{2}$
+6. Read symbol "@" $\in \Phi$, move to $q_{3}$
+7. Read symbol e $\in \Psi$, move to $q_{4}$
+8. Read symbol x $\in \Psi$, move to $q_{4}$
+9. Read symbol "." $\in \Pi$, move to $q_{5}$
+10. Read symbol g, move to $q_{6}$
+11. Read symbol o, move to $q_{8}$
+12. Read symbol v, move to $q_{9}$
+
+The entire string has been processed, and $M$ ended in $q_{9} \in F$ which is an accepting state, so the string "a.bc@ex.gov" is accepted as being in the language $L$
+
